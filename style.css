@@ -1,0 +1,112 @@
+/*center*/
+body {
+  margin: 0 auto;
+  max-width: 50em;
+}
+/*font family*/
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+/* spacing*/
+body {
+  line-height: 1.5;
+  padding: 4em 1em;
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+/*Color & Contrast*/
+body {
+  color: #555;
+}
+h1,
+h2,
+strong {
+  color: #333;
+}
+a {
+  color: #e81c4f;
+}
+/*Header*/
+header {
+  background-color: #263d36;
+  background-image: url("header.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 10vw 2em;
+  text-align: center;
+}
+header img {
+  display: inline-block;
+  vertical-align: top;
+  width: 120px;
+}
+/* text styles*/
+header h1 {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+header a {
+  border: 1px solid #e81c4f;
+  border-radius: 290486px;
+  color: white;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+}
+
+header a:hover {
+  background:  #e81c4f;
+  color: white;
+}
+ul.skills {
+    list-style: none;
+    padding-left: .25em;
+    float:inherit;
+ }
+ul.skills li {
+    display: inline;
+    margin: .35em;
+    padding: .25em;
+    background: #eee;
+    border-left: 4px solid #000;
+    list-style: none;
+    display: inline;
+    float: left;
+    display: inline-block;
+}
+ul.skills li.comm {
+    border-left: 4px solid lightblue;
+}
+ul.skills li.tech {
+    border-left: 4px solid lightgreen;
+}
+
+ul.skills:after { 
+   content: "";
+   display: block; 
+   clear: both;
+}
+.fa {
+    padding:1em
+}
+.job aside{
+    padding-top:4px;
+    font-style:italic;
+}
+.job h3 {
+    margin-bottom: 0;
+    border-bottom: 1px solid lightgreen;
+}
