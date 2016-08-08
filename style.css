@@ -71,7 +71,7 @@ h2 {
 }
 h3 {
   font-size:1.5em;
-    padding:.25em 0 .5em
+padding:1em 0 .25em
 }
 /*Color & Contrast*/
 body {
@@ -127,7 +127,7 @@ ul.skills:after {
     padding: 0 .75em 0;
 }
 .job aside{
-    padding-top:4px;
+    padding:.5em 0;
     font-style:italic;
     font-size:.667em;
 }
@@ -174,7 +174,7 @@ header h1 {
 }
 header p {
     color:#f0eff4;
-    padding: 5vw;
+    padding: 1em;
     font-size: 1em;
     left: 1em;
     top:.25em;
