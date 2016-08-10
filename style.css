@@ -50,15 +50,15 @@ table {
 
 
 /*center*/
-body {
-  margin: 0 auto;
-  max-width: 50em;
+article , div.head {
+    margin: 0 auto;
+    max-width: 50em;
 }
 /*font family*/
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import url(https://fonts.googleapis.com/css?family=Muli);
 
 body {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Muli", "Helvetica", "Arial", sans-serif;
 }
 /* spacing*/
 body {
@@ -66,12 +66,12 @@ body {
 }
 
 h2 {
-  padding: .25em 0em .5em;
+  padding: .5em 0em 0em;
   font-size:2.25em;
 }
 h3 {
-  font-size:1.5em;
-padding:1em 0 .25em
+    font-size:1.5em;
+    padding:.75em 0 .25em
 }
 /*Color & Contrast*/
 body {
@@ -94,9 +94,9 @@ ul.skills {
     list-style: none;
     padding-left: .25em;
     float:inherit;
+    display:table;
  }
 ul.skills li {
-    display: inline;
     margin: .35em;
     padding: .25em .75em;
     background: #eee;
@@ -106,7 +106,10 @@ ul.skills li {
     float: left;
     display: inline-block;
     border-radius: 2px;
-    font-size: .667em;
+    font-size: .8em;
+}
+ul.skills li:hover {
+    background-color:#ddd;
 }
 #skills ul.skills li {
     font-size: .8em;
@@ -129,7 +132,7 @@ ul.skills:after {
 .job aside{
     padding:.5em 0;
     font-style:italic;
-    font-size:.667em;
+    font-size:.75em;
 }
 .job h3 {
     margin-bottom: 0;
@@ -152,7 +155,8 @@ header img {
     border-radius: 6px;
     max-width: 200px;
     float:left;
-    padding: 1.25em 5% 1em ;
+    margin: 1.25em 2.5% 1em ;
+    display:block;
 
 }
 /* text styles*/
@@ -162,6 +166,14 @@ hearder p {    font-size: 1.75em; }http://www.modularscale.com/?1&em&1.5&web&tex
 }
 
 */
+header:before,
+header:after {
+	content:"";
+	display:table;
+}
+header:after {
+	clear:both;
+}
 header h1 {
     width: 60%;
     float: left;
@@ -170,7 +182,8 @@ header h1 {
     font-size:3.375em;
     font-weight: 300;
     line-height: 1;
-    padding: .5em 5% .5em ;
+    padding: .5em 2.5% .5em ;
+
 }
 header p {
     color:#f0eff4;
@@ -179,6 +192,14 @@ header p {
     left: 1em;
     top:.25em;
     clear:both;
+}
+@media (min-width: 611px) {
+  header p {
+        float:left;
+        width: 60%;
+        padding: .5em 2.5% .5em ;
+      clear:none
+    }
 }
 
 /* navigation */
@@ -227,4 +248,65 @@ div.section {
 footer {
     min-height: 300px;
     background-color:#eee
+}
+/* job listings */
+@media (min-width: 650px) {
+  .job  p {
+        float:left;
+        width: 60%;
+      padding-right: 2%;
+    }
+}
+
+button {
+    display: inline-block;
+    margin-top: 2em;
+    background: #ddd;
+    border: 0;
+    border-left: 4px solid #7d80da;
+    border-radius: 4px;
+    font-size: 1em;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+}
+button:hover {
+    background: #ccc;
+}
+
+/* Columns for Skills */
+
+.group {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+    width: 49.2%
+}
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+@media only screen and (max-width: 580px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+        width: 100%; 
+	}
 }

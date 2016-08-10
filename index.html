@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Rachel Klingler</title>
-    <meta name="description" content="Information on Rachel Klingler"></meta>
+    <meta name="description" content="Information on Rachel Klingler">
     <link rel="stylesheet" href='style.css' type='text/css'>
     <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
 </head>
@@ -17,10 +17,14 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <img src='rachel.jpg' />
-            <h1>Rachel Klingler</h1>
-            <p>I am a customer service expert and web developer who believes in the power of building relationships. I love helping people solve problems with technology.</p>
+            <div class="head">
+                <img src='rachel.jpg' />
+                <h1>Rachel Klingler</h1>
+                <p>I am a customer service expert and web developer who believes in the power of building relationships. I love helping people solve problems with technology.</p>
+                <span></span>
+            </div>
         </header>
+        <article>
         <!--div class="section" id="about">
             <h2>About Me</h2>
             <p>I am a customer service expert and web developer who believes in the power of building relationships. I love helping people solve problems with technology.</p>
@@ -28,21 +32,27 @@
         <div class="section" id="skills">
             <h2>Skills</h2>
             <p>I have both techincal and communication skills. I excel at bridging the gap between technical and non-technical teams.</p>
-            <h3><i class="fa fa-code"></i>Technical</h3>
-            <ul class="skills">
-                <li class="tech">WordPress Plugin Development</li>
-                <li class="tech">JavaScript and JQuery</li>
-                <li class="tech">HTML, XML and CSS</li>
-                <li class="tech">Git</li>
-                <li class="tech">Crystal Reports</li>
-            </ul>
-            <h3><i class="fa fa-comments"></i>Communication and Support</h3>
-            <ul class="skills">
-                <li class="comm">Customer Support</li>
-                <li class="comm">Technical Writing</li>
-                <li class="comm">Relationship Building</li>
-                <li class="comm">Rhetorical Flexibility</li>
-            </ul>
+            <div class="group">
+                <div class="col ">
+                    <h3><i class="fa fa-code"></i>Technical</h3>
+                    <ul class="skills">
+                        <li class="tech">WordPress Plugin Development</li>
+                        <li class="tech">JavaScript and JQuery</li>
+                        <li class="tech">HTML, XML and CSS</li>
+                        <li class="tech">Git</li>
+                        <li class="tech">Crystal Reports</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3><i class="fa fa-comments"></i>Communication &amp; Support</h3>
+                    <ul class="skills">
+                        <li class="comm">Customer Support</li>
+                        <li class="comm">Technical Writing</li>
+                        <li class="comm">Relationship Building</li>
+                        <li class="comm">Rhetorical Flexibility</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="section experience" id="experience">
             <h2>Experience</h2>
@@ -54,18 +64,18 @@
                     <li class="tech">WordPress Plugin Development</li>
                     <li class="comm">Customer Support</li>
                     <li class="comm">Technical Writing</li>
-                    <li class="tech">JavaScript and JQuery</li>
+                    <li class="tech">JavaScript &amp; JQuery</li>
                     <li class="comm">Relationship Building</li>
-                    <li class="tech">HTML, XML and CSS</li>
+                    <li class="tech">HTML, XML &amp; CSS</li>
                     <li class="tech">Git</li>
                 </ul>
             </div>
             <div class="job">
                 <h3>Technical Services, Epic Systems Corporation</h3>
                 <aside>Summer 2012 to Summer 2014</aside>
-                <p>I was the main technical contact for MyChart and EpicCare Link, two web-based applications, for up to ten customers at a time. I helped the IT departments at healthcare organizations plan, implement and manage their use of these products.</p>
+                <p>I was the main technical contact for MyChart and EpicCare Link, two web-based applications, for up to ten customers. I helped the IT departments at healthcare organizations plan, implement and manage their use of these products.</p>
                 <ul class="skills">
-                    <li class="tech">HTML, XML and CSS</li>
+                    <li class="tech">HTML, XML &amp; CSS</li>
                     <li class="comm">Customer Support</li>
                     <li class="comm">Technical Communication</li>
                     <li class="comm">Managing Priorities</li>
@@ -83,12 +93,13 @@
                     <li class="comm">Rhetorical Flexibility</li>
                 </ul>
             </div>
-            <aside><a href=""><i class="fa fa-download"></i>Download my full resume</a></aside>
+            <button><a href=""><i class="fa fa-download"></i>Download my full resume</a></button>
         </div>
         <div class="section cf" id="contact">
             <h2>Contact</h2>
             <p>Contact me at <a href="rmklingler@gmail.com">rmklingler@gmail.com</a>.</p>
         </div>
+        </article>
 
         <footer>
 
