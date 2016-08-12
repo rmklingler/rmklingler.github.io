@@ -90,23 +90,27 @@ p {
 }
 
 
+
+/* styling the skills lists*/
 ul.skills {
-    list-style: none;
-    padding-left: .25em;
-    float:inherit;
-    display:table;
- }
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    align-content: flex-start;
+}
 ul.skills li {
     margin: .35em;
     padding: .25em .75em;
     background: #eee;
     border-left: 4px solid #000;
     list-style: none;
-    display: inline;
-    float: left;
-    display: inline-block;
     border-radius: 2px;
     font-size: .8em;
+    transition: none 500ms ease-out;
+    transition-property: color, background;
 }
 ul.skills li:hover {
     background-color:#ddd;
@@ -145,39 +149,28 @@ header {
     width:100%;
     background-color: #b8bacf;
     line-height: 1.2;
-    clear:both;
-    box-sizing: border-box;
-    position: relative;
+    display:flex;
 }
-
-header img {
-    width: 20%;
+.head {
+    max-width: 50em;
+    justify-content: space-around;
+}
+.head  {
+    display:flex;
+    align-items: stretch;
+}
+.head img {
     border-radius: 6px;
-    max-width: 200px;
-    float:left;
+    width:100%;
+}
+.head .img-wrapper {
+    max-width:200px;
+    height:auto;
+    border-radius: 6px;
     margin: 1.25em 2.5% 1em ;
-    display:block;
-
+    flex:1 1 30%;
 }
-/* text styles*/
-/* for bigger widths 
-header h1 {    font-size: 3.125em; }
-hearder p {    font-size: 1.75em; }http://www.modularscale.com/?1&em&1.5&web&text
-}
-
-*/
-header:before,
-header:after {
-	content:"";
-	display:table;
-}
-header:after {
-	clear:both;
-}
-header h1 {
-    width: 60%;
-    float: left;
-    position: relative;
+.head h1 {
     color: #FFF;
     font-size:3.375em;
     font-weight: 300;
@@ -185,57 +178,64 @@ header h1 {
     padding: .5em 2.5% .5em ;
 
 }
-header p {
+.head p {
     color:#f0eff4;
-    padding: 1em;
+    padding: .5em 2.5% .5em ;
     font-size: 1em;
-    left: 1em;
-    top:.25em;
-    clear:both;
 }
-@media (min-width: 611px) {
-  header p {
-        float:left;
-        width: 60%;
-        padding: .5em 2.5% .5em ;
-      clear:none
-    }
+.head .side-container {
+    flex:1 1 60%;
+    display:flex;
+    flex-direction:column;
+    align-content: space-around;
+    align-items:l   ;
 }
+/* text styles*/
+/* for bigger widths 
+header h1 {    font-size: 3.125em; }
+hearder p {    font-size: 1.75em; }http://www.modularscale.com/?1&em&1.5&web&text
+}
+*/
+
+
 
 /* navigation */
+
+
+ul.nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
 div.nav-container {
     background: #65655e;
     width:100%;
-    height:40px;
-}header .nav a {
+} .nav a {
     display:block;
     text-decoration:none;
 }
-header .nav li {
+ .nav li {
     display: table-cell;
     vertical-align: middle;
     float:left;
 }
-header ul.nav {
-    list-style: none;
-    float:right;
-}
-header a {
-  /*border: 1px solid #e81c4f;*/
-  border-radius: 2px;
-        border-left: 4px solid #7D80DA;
-background-color: #74746e;
+.nav a {
+    border-radius: 2px;
+    border-left: 4px solid #7D80DA;
+    background-color: #74746e;
     margin: .75em;
-  color: #f0eff4;
+    color: #f0eff4;
     font-size: 0.6em;
-  letter-spacing: 0.2em;
-  padding: .75em 1.25em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: none 200ms ease-out;
-  transition-property: color, background;
+    letter-spacing: 0.2em;
+    padding: .75em 1.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: none 500ms ease-out;
+    transition-property: color, background;
 }
-header a:hover {
+.nav a:hover {
   background:  #7d80da;
   color: white;
 }
@@ -250,11 +250,16 @@ footer {
     background-color:#eee
 }
 /* job listings */
-@media (min-width: 650px) {
-  .job  p {
-        float:left;
-        width: 60%;
-      padding-right: 2%;
+.job .group p {
+    flex: 1 1 50%;
+}
+.job .group ul {
+    flex: 1 1 30%;
+}
+
+@media (max-width: 600px) {
+  .job .group {
+      flex-direction: column
     }
 }
 
@@ -279,34 +284,22 @@ button:hover {
 }
 
 /* Columns for Skills */
-
 .group {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content:flex-start;
+    flex-wrap: wrap;
 }
-.group:before,
-.group:after {
-    content:"";
-    display:table;
-}
-.group:after {
-    clear:both;
-}
-.group {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+@media all and (max-width: 580px) {
+  .container {
+    flex-direction: column;
+  }
 }
 .col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-    width: 49.2%
+  flex:1 1 50%;
 }
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
-@media (max-width: 580px) {
-	.col { 
-		margin: 1% 0 1% 0%;
-        width: 100%; 
-	}
+.group. col li {
+  flex: 0 1 auto;
+  padding: 10px;
 }
