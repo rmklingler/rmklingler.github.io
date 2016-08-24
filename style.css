@@ -83,7 +83,7 @@ strong {
   color: #333;
 }
 a {
-  color: #7d80da;
+  color: #768299;
 }
 p {
     font-size: 1em;
@@ -113,7 +113,7 @@ p {
 /*Header*/
 header {
     width:100%;
-    background-color: #b8bacf;
+    background-color: #ededed;
     line-height: 1.2;
     display:flex;
 }
@@ -142,14 +142,12 @@ header {
     align-items:l   ;
 }
 .head h1 {
-    color: #FFF;
     font-size:3.375em;
     font-weight: 300;
     line-height: 1;
     padding: .5em 2.5% .5em ;
 }
 .head p {
-    color:#f0eff4;
     padding: .5em 2.5% .5em ;
     font-size: 1em;
 }
@@ -164,14 +162,14 @@ ul.nav {
     flex-wrap: wrap;
 }
 div.nav-container {
-    background: #65655e;
+    background: #aaa;
     width:100%;
 } 
 .nav a {
     display:block;
     text-decoration:none;
     border-radius: 2px;
-    border-left: 4px solid #7D80DA;
+    border-left: 4px solid #2F66CC;
     background-color: #74746e;
     margin: .75em;
     color: #f0eff4;
@@ -184,7 +182,7 @@ div.nav-container {
     transition-property: color, background;
 }
 .nav a:hover {
-  background:  #7d80da;
+  background:  #768299;
   color: white;
 }
 
@@ -194,7 +192,7 @@ div.section {
 }
 footer {
     min-height: 300px;
-    background-color:#eee
+    background-color:#ededed
 }
 
 /* styling the skills lists*/
@@ -225,10 +223,10 @@ ul.skills li:hover {
     font-size: .8em;
 }
 ul.skills li.comm {
-    border-left: 4px solid #7D80DA;
+    border-left: 4px solid #2F66CC;
 }
 ul.skills li.tech {
-    border-left: 4px solid #b8bacf;
+    border-left: 4px solid #CC4D37;
 }
 
 ul.skills:after { 
@@ -275,19 +273,26 @@ hearder p {    font-size: 1.75em; }http://www.modularscale.com/?1&em&1.5&web&tex
 .experience button {
     display: inline-block;
     margin-top: 2em;
-    background: #ddd;
+    background: #eee;
     border: 0;
-    border-left: 4px solid #7d80da;
+    border-left: 4px solid #CC4D37;
     border-radius: 4px;
     font-size: 1em;
     height: 38px;
-    padding: 0 30px;
-    color: #555;
+    padding: 0 20px;
     text-align: center;
     font-weight: 600;
     white-space: nowrap;
     cursor: pointer;
+    transition: none 500ms ease-out;
+    transition-property: color, background;
 }
+}
+.experience button a {
+    color: green ;
+
+}
+
 .experience button:hover {
     background: #ccc;
 }
