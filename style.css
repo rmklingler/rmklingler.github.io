@@ -296,3 +296,7 @@ hearder p {    font-size: 1.75em; }http://www.modularscale.com/?1&em&1.5&web&tex
 .experience button:hover {
     background: #ccc;
 }
+
+a button {
+    color: #768299;
+}
